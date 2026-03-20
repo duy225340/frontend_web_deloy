@@ -84,7 +84,7 @@ interface UseOrdersOptions {
   size?: number;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "/api";
+const API_URL = `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"}/api`;
 
 export const useOrders = (options: UseOrdersOptions = {}) => {
   const [orders, setOrders] = useState<Order[]>([]);
